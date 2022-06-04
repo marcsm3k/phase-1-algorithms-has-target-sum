@@ -1,13 +1,33 @@
-function hasTargetSum(array, target) {
-  // Write your algorithm here
-}
+  function hasTargetSum(arr, tarNum) {
+
+    for (let i = 0; i < arr.length; i++) {
+
+      const comNum = tarNum - arr[i];
+
+      for (let j = i + 1; j < arr.length; j++) {
+
+        if (arr[j] === comNum) return true;
+      }
+    }
+    return false;
+  }
+
 
 /* 
   Write the Big O time complexity of your function here
+
+  Nested Loops? I believe this is 0(n^2)
 */
 
 /* 
-  Add your pseudocode here
+  need to iterate over an array of numbers 
+  
+  for each number(element) look for another number(element) and add them. 
+  If it is the target number then true. 
+
+  keep iterating through the array and do the same
+
+  if not we reach end of the array and return false 
 */
 
 /*
